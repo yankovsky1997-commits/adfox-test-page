@@ -3,120 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Простой сайт</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .main-content {
-            display: flex;
-            flex: 1;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-        }
-
-        aside {
-            background-color: #f4f4f4;
-            width: 250px;
-            padding: 20px;
-            border-left: 1px solid #ddd;
-            height: 100vh; /* Фиксированная высота на весь экран */
-            position: fixed; /* Фиксированное позиционирование */
-            top: 0;
-            right: 0; /* Прилипание к правому краю */
-            overflow-y: auto; /* Полоса прокрутки при необходимости */
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: auto;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-bottom: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav a:hover {
-            color: #007bff;
-        }
-    </style>
+    <title>Простой сайт с динамической шапкой</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Мой сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+    <!-- Шапка сайта (динамическая) -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Мой сайт</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link">Главная</a>
+                <a href="#" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Контакты</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="main-content">
-        <main>
-            <h2>Основное содержимое</h2>
-            <p>Здесь располагается основной контент страницы. Вы можете добавить сюда текст, изображения, видео и другие элементы.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <!-- Для демонстрации прокрутки -->
-            <div style="height: 1000px;"></div>
-            <p>Дополнительный контент для демонстрации прокрутки.</p>
-        </main>
-    </div>
+    <!-- Основное содержимое -->
+    <main class="content">
+        <div class="container">
+            <h2>Добро пожаловать на мой сайт!</h2>
+            <p>Это пример простого сайта с динамической шапкой и подвалом разных цветов.</p>
+            
+            <!-- Много контента для прокрутки -->
+            <div class="dummy-content">
+                <h3>Дополнительный контент для демонстрации прокрутки</h3>
+                <p>Прокрутите страницу вниз, чтобы увидеть, как шапка остаётся на месте.</p>
+                <div class="block">Блок 1</div>
+                <div class="block">Блок 2</div>
+                <div class="block">Блок 3</div>
+                <div class="block">Блок 4</div>
+                <div class="block">Блок 5</div>
+            </div>
+        </div>
+    </main>
 
-    <aside>
-        <h3>Сайдбар</h3>
-        <nav>
-            <ul>
-                <li><a href="#">Ссылка 1</a></li>
-                <li><a href="#">Ссылка 2</a></li>
-                <li><a href="#">Ссылка 3</a></li>
-                <li><a href="#">Ссылка 4</a></li>
-                <li><a href="#">Ссылка 5</a></li>
-                <li><a href="#">Ссылка 6</a></li>
-                <li><a href="#">Ссылка 7</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <footer>
-        <p>&copy; 2024 Мой сайт. Все права защищены.</p>
-        <p>Email: <a href="mailto:info@example.com" style="color: white;">info@example.com</a></p>
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Мой сайт. Все права защищены.</p>
+            <div class="social">
+                <a href="#" class="social-link">ВКонтакте</a>
+                <a href="#" class="social-link">Telegram</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
