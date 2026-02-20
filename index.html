@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        aside {
+            background-color: #f4f4f4;
+            width: 250px;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мой сайт</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>Основное содержимое</h2>
+            <p>Здесь располагается основной контент страницы. Вы можете добавить сюда текст, изображения, видео и другие элементы.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </main>
+
+        <aside>
+            <h3>Сайдбар</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">Ссылка 1</a></li>
+                    <li><a href="#">Ссылка 2</a></li>
+                    <li><a href="#">Ссылка 3</a></li>
+                    <li><a href="#">Ссылка 4</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мой сайт. Все права защищены.</p>
+        <p>Email: <a href="mailto:info@example.com" style="color: white;">info@example.com</a></p>
+    </footer>
+</body>
+</html>
