@@ -14,10 +14,8 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-        }
-
-        .container {
             display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
 
@@ -28,9 +26,15 @@
             text-align: center;
         }
 
-        .content {
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        main {
             flex: 1;
             padding: 20px;
+            background-color: #fff;
         }
 
         aside {
@@ -38,10 +42,11 @@
             width: 250px;
             padding: 20px;
             border-left: 1px solid #ddd;
-        }
-
-        main {
-            padding: 20px;
+            height: 100vh; /* Фиксированная высота на весь экран */
+            position: fixed; /* Фиксированное позиционирование */
+            top: 0;
+            right: 0; /* Прилипание к правому краю */
+            overflow-y: auto; /* Полоса прокрутки при необходимости */
         }
 
         footer {
@@ -49,9 +54,7 @@
             color: white;
             text-align: center;
             padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: auto;
         }
 
         nav ul {
@@ -85,25 +88,31 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="main-content">
         <main>
             <h2>Основное содержимое</h2>
             <p>Здесь располагается основной контент страницы. Вы можете добавить сюда текст, изображения, видео и другие элементы.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!-- Для демонстрации прокрутки -->
+            <div style="height: 1000px;"></div>
+            <p>Дополнительный контент для демонстрации прокрутки.</p>
         </main>
-
-        <aside>
-            <h3>Сайдбар</h3>
-            <nav>
-                <ul>
-                    <li><a href="#">Ссылка 1</a></li>
-                    <li><a href="#">Ссылка 2</a></li>
-                    <li><a href="#">Ссылка 3</a></li>
-                    <li><a href="#">Ссылка 4</a></li>
-                </ul>
-            </nav>
-        </aside>
     </div>
+
+    <aside>
+        <h3>Сайдбар</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Ссылка 1</a></li>
+                <li><a href="#">Ссылка 2</a></li>
+                <li><a href="#">Ссылка 3</a></li>
+                <li><a href="#">Ссылка 4</a></li>
+                <li><a href="#">Ссылка 5</a></li>
+                <li><a href="#">Ссылка 6</a></li>
+                <li><a href="#">Ссылка 7</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <footer>
         <p>&copy; 2024 Мой сайт. Все права защищены.</p>
