@@ -132,3 +132,7 @@ li {
     font-size: 9pt;
     text-align: left;
 }
+
+.image-container {
+    margin-right: 20px;
+}
