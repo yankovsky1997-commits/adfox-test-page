@@ -75,6 +75,7 @@ body {
 .content p {
     margin-bottom: 1rem;
     text-align: left;
+    font-size: 9pt;
 }
 
 /* Дополнительный контент для прокрутки */
