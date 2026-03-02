@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт для тестирования функционала Adfox</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!--код загрузчика Adfox-->
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    
+</head>
+<body>
+    <!-- Шапка сайта (динамическая) -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADFOX - тестовый сайт</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link">Главная</a>
+                <a href="#" class="nav-link">Тестирование таргетингов</a>
+                <a href="#" class="nav-link">Тест Header Bidding Adfox</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+        <div class="container">
+            <!-- Много контента для прокрутки -->
+            <div class="dummy-content">
+                
+                <div class="block">
+                    <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
+                    <div class="text-content" style="flex: 2;">
+                      <!--AdFox START-->
+                      <!--yandex_oleg.yankovsky007-->
+                      <!--Площадка: Тестовый сайт на GitHub / GiHub - Главная страница / Главная GitHub-->
+                      <!--Категория: <не задана>-->
+                      <!--Баннер: <не задана>-->
+                      <!--Тип баннера: Media banner-->
+                      <div id="adfox_177244055653751810"></div>
+                      <script>
+                          window.yaContextCb.push(()=>{
+                              Ya.adfoxCode.create({
+                                  ownerId: 5202278,
+                                  containerId: 'adfox_177244055653751810',
+                                  params: {
+                                      p1: 'dksdz',
+                                      p2: 'p',
+                                      pfc: 'hsgmj',
+                                      pfb: 'biomqq'
+                                  }
+                              })
+                          })
+                      </script>
+
+                    </div>
+                    </div>
+                </div>
+        </div>       
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Тестовый сайт для Adfox</p>
+            <div class="social">
+                <a href="https://yandex.ru/support/adfox/ru/" class="social-link">Справка Adfox</a>
+                <a href="https://yandex.ru/dev/adfox/doc/ru/" class="social-link">Справка API Adfox</a>
+                <a href="#" class="social-link">Test btn</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
