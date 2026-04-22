@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт для тестирования функционала Adfox</title>
     <link rel="stylesheet" href="style.css">
+
+    <script async src='https://yandex.ru/ads/system/header-bidding.js'></script>
+        <script>
+        var adfoxBiddersMap = {
+          "myTarget": "3546501"
+        };
+        
+        var adUnits = [
+          {
+            "code": "adfox_177641903277351251",
+            "bids": [
+              {
+                "bidder": "myTarget",
+                "params": {
+                  "placementId": "1997448"
+                }
+              }
+            ]
+          }
+        ];
+        
+        var userTimeout = 500;
+        
+        window.YaHeaderBiddingSettings = {
+           biddersMap: adfoxBiddersMap,
+           adUnits: adUnits,
+           timeout: userTimeout,
+        };
+        </script>
     
     <!--код загрузчика Adfox-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
@@ -34,29 +63,31 @@
                 <div class="block">
                     <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
                     <div class="text-content" style="flex: 2;">
+
+                     <!--НАЧАЛО МЕСТА ДЛЯ ТЕСТИРУЕМОГО КОДА-->
+                        
                         <!--AdFox START-->
-                        <!--yandex_oleg.yankovsky007-->
-                        <!--Площадка: Тестовый сайт на GitHub / GiHub - Главная страница / Главная GitHub-->
-                        <!--Категория: <не задана>-->
-                        <!--Баннер: <не задана>-->
-                        <!--Тип баннера: Media banner-->
-                        <div id="adfox_177615132042461810"></div>
+                        <!--yandex_prokvidm-->
+                        <!--Площадка: Росстип / * / *-->
+                        <!--Тип баннера: под статьями-->
+                        <!--Расположение: низ страницы-->
+                        <div id="adfox_177687088760791251"></div>
                         <script>
                             window.yaContextCb.push(()=>{
                                 Ya.adfoxCode.create({
-                                    ownerId: 5202278,
-                                    containerId: 'adfox_177615132042461810',
+                                    ownerId: 387148,
+                                    containerId: 'adfox_177687088760791251',
                                     params: {
-                                        p1: 'dksdz',
-                                        p2: 'p',
-                                        pfc: 'hkajo',
-                                        pfb: 'biusgx',
-                                        puid1: ''
+                                        pp: 'i',
+                                        ps: 'gxrm',
+                                        p2: 'jrzr'
                                     }
                                 })
                             })
                         </script>
 
+                     <!-- КОНЕЦ МЕСТА ДЛЯ ТЕСТИРУЕМОГО КОДА-->
+                
                     </div>
                     </div>
                 </div>
