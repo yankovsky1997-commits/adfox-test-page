@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="style.css">
 
     <script async src='https://yandex.ru/ads/system/header-bidding.js'></script>
+
+                    <script>
+                var adfoxBiddersMap = {
+                  "myTarget": "3546501"
+                };
+                
+                var adUnits = [
+                  {
+                    "code": "adfox_177641903277351251",
+                    "bids": [
+                      {
+                        "bidder": "myTarget",
+                        "params": {
+                          "placementId": "1997448"
+                        }
+                      }
+                    ]
+                  }
+                ];
+                
+                var userTimeout = 500;
+                
+                window.YaHeaderBiddingSettings = {
+                   biddersMap: adfoxBiddersMap,
+                   adUnits: adUnits,
+                   timeout: userTimeout,
+                };
+                </script>
     
     <!--код загрузчика Adfox-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
@@ -39,7 +67,26 @@
 
                      <!--НАЧАЛО МЕСТА ДЛЯ ТЕСТИРУЕМОГО КОДА-->
                         
-
+                        <!--AdFox START-->
+                        <!--yandex_prokvidm-->
+                        <!--Площадка: Росстип / * / *-->
+                        <!--Тип баннера: под статьями-->
+                        <!--Расположение: низ страницы-->
+                        <div id="adfox_177692780789971251"></div>
+                        <script>
+                            window.yaContextCb.push(()=>{
+                                Ya.adfoxCode.create({
+                                    ownerId: 387148,
+                                    containerId: 'adfox_177692780789971251',
+                                    params: {
+                                        pp: 'i',
+                                        ps: 'gxrm',
+                                        p2: 'jrzr'
+                                    }
+                                })
+                            })
+                        </script>
+                        
                      <!-- КОНЕЦ МЕСТА ДЛЯ ТЕСТИРУЕМОГО КОДА-->
                 
                     </div>
