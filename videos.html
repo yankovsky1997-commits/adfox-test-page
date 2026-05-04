@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт для тестирования функционала Adfox</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!--код загрузчика Adfox-->
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    
+</head>
+<body>
+    <!-- Шапка сайта (динамическая) -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADFOX - тестовый сайт</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="#" class="nav-link">Тестирование таргетингов</a>
+                <a href="#" class="nav-link">Тест Header Bidding Adfox</a>
+                <a href="test-page.html" class="nav-link">Тестовая страница</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+        <div class="container">
+            <h2>Добро пожаловать!</h2>
+            
+            <!-- Много контента для прокрутки -->
+            <div class="dummy-content">
+                
+                <div class="block">
+                    <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
+                      <div class="image-container" style="flex: 1;">
+                        <!--AdFox START-->
+
+                    <div class="text-content" style="flex: 2;">
+                    <h3 style="margin-top: 0; color: #333;">Баннер Image, код вставки с уровня размещения баннера</h3>
+                    <p style="color: #666; line-height: 1.2;">
+                     Особенности работы кода вставки с этого уровня:
+                        <ul>
+                          <li>По коду вставки можно показать только тот баннер, от которого получен код.</li>
+                          <li>Другие баннеры, размещенные на этой же площадке, не могут быть выбраны для показа по этому коду.</li>
+                          <li>Если баннер, от которого получен код, не сможет быть показан (например, баннер не активен), в ответ придет заглушка.</li>
+                          <li>Баннер может быть размещен на нескольких площадках, но статистика будет идти только по той площадке, от которой был получен код вставки.</li>
+                          <li>При запросе не проверяются Шаблоны страниц, указанные в параметрах раздела.</li>
+                          <li>С уровня размещения баннера также можно получить ссылку на пиксель и на переход для промера статистики.</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="block">
+                <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
+                      <div class="image-container" style="flex: 1;">
+                        <!--AdFox START-->
+                       
+                         </div>
+                    <div class="text-content" style="flex: 2;">
+                    <h3 style="margin-top: 0; color: #333;">Баннер HTML5, код вставки с уровня площадки</h3>
+                    <p>
+                        Код вставки с уровня площадки принадлежит определенному разделу сайта. Вы задаете в интерфейсе логическую структуру вашего сайта (разделы, площадки),
+                        затем вручную, взяв коды с уровня площадок в каждом разделе сайта, размещаете эти коды на соответствующие места в реальных разделах вашего сайта.
+                        Такой код необходимо вставить именно в тот раздел сайта, где планируется показ рекламы.Если структура сайта или логика продаж рекламных мест на сайте не
+                        предусматривает разбиения сайта на разделы, можно воспользоваться любой из предложенных схем.
+                    </p>
+                    <p style="color: red">Слева в ротации несколько баннеров, так как для этой площадки указано размещение для нескольких баннеров</p>
+                  </div>
+                </div>
+                </div>
+              
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Тестовый сайт для Adfox</p>
+            <div class="social">
+                <a href="https://yandex.ru/support/adfox/ru/" class="social-link">Справка Adfox</a>
+                <a href="https://yandex.ru/dev/adfox/doc/ru/" class="social-link">Справка API Adfox</a>
+                <a href="#" class="social-link">Test btn</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
