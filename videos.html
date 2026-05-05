@@ -11,22 +11,6 @@
     <script src="https://yandex.ru/ads/system/context.js" async></script>
     <!-- Подключаем AdSDK -->
     <script type="text/javascript" charset="utf-8" src="https://yandex.ru/ads/system/adsdk.js"></script>
-        <script>
-            var adFoxParameters = {
-            adFoxParameters: {
-            ownerId: 5202278,
-            // ID родительского контейнера тега <video></video>
-            containerId: 'videoParent',
-            // Параметры Adfox
-            params: {
-            p1: 'dmpgw',
-            p2: 'hiuy',
-            pfc: 'hrdjh',
-            pfb: 'bixtjq'
-        },
-    }
- }
-        </script>
     
     
 </head>
@@ -58,7 +42,34 @@
 
                     <div class="text-content" style="flex: 2;">
                     <h3 style="margin-top: 0; color: #333;">Стандартный VAST</h3>
+                        <div id="video_container">
                         <video id='videoParent' src="video1.mp4" width="480" height="360" controls="controls"></video>
+                                    <script>
+                                        var adFoxParameters = {
+                                        adFoxParameters: {
+                                            ownerId: 5202278,
+                                            // ID родительского контейнера тега <video></video>
+                                            containerId: 'video_container',
+                                            // Параметры Adfox
+                                            params: {
+                                            p1: 'dmpgw',
+                                            p2: 'hiuy',
+                                            pfc: 'hrdjh',
+                                            pfb: 'bixtjq'
+                                                    },
+                                                        }
+                                                             }
+                                        ya.videoAd.play({
+                                        // Видеоэлемент
+                                        videoSlot: document.querySelector('#video_container'),
+                                        // Элемент для показа контролов. Элемент не должен быть статически позиционирован.
+                                        // Можно использовать родительский элемент видео.
+                                        slot: document.querySelector('#videoParent'),
+                                        // Конфиг загрузки и конфиг проигрывания рекламы.
+                                        config: adFoxParameters,
+                                    });
+                                    </script>
+                        </div>
                   </div>
                 </div>
                 </div>
