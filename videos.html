@@ -44,7 +44,7 @@
                     <h3 style="margin-top: 0; color: #333;">Стандартный VAST</h3>
 
                         <!-- Контейнер, в котором лежит плеер -->
-                        <div id="video_container">
+                        <div id="slot">
                         <video id="video" src="video1.mp4" width="480" height="360" controls="controls"></video>
                         </div>
 
@@ -64,7 +64,7 @@
                     
                             ya.videoAd.play({
                                 videoSlot: document.getElementById('video'),
-                                slot: document.getElementById('video_container'),
+                                slot: document.getElementById('slot'),
                                 config: testAdFoxParameters,
                             })
                         </script>
