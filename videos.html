@@ -14,7 +14,8 @@
     
     <style>
 
-        #slot{
+        .vslot
+        {
             position: relative;
             width: 100%;
             height: 100%;
@@ -54,10 +55,10 @@
                       <div class="image-container" style="flex: 1;">
 
                     <div class="text-content" style="flex: 2;">
-                    <h3 style="margin: 5px; color: #333;">Pre-roll • Linear-Ad (Pre / Mid / Post - Roll) VAST 3.0</h3>
+                    <h3 style="margin: 5px; color: #333;">Pre-roll • Linear-Ad Pre Roll VAST 3.0</h3>
 
                         <!-- Контейнер, в котором лежит плеер -->
-                        <div id="slot">
+                        <div class="vslot" id="slot">
                         <video id="video" src="video1.mp4" width="480" height="360" controls="controls"></video>
                         </div>
 
@@ -78,7 +79,7 @@
                             ya.videoAd.play({
                                 videoSlot: document.getElementById('video'),
                                 slot: document.getElementById('slot'),
-                                config: testAdFoxParameters,
+                                config: testAdFoxParameters
                             })
                         </script>
     
@@ -87,21 +88,37 @@
                 </div>
                 </div>
 
-                <div class="block">
-                <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
-                      <div class="image-container" style="flex: 1;">
-                        <!--AdFox START-->
-                       
-                         </div>
-                    <div class="text-content" style="flex: 2;">
-                    <h3 style="margin-top: 0; color: #333;">Баннер HTML5, код вставки с уровня площадки</h3>
-                    <p>
-                        Код вставки с уровня площадки принадлежит определенному разделу сайта. Вы задаете в интерфейсе логическую структуру вашего сайта (разделы, площадки),
-                        затем вручную, взяв коды с уровня площадок в каждом разделе сайта, размещаете эти коды на соответствующие места в реальных разделах вашего сайта.
-                        Такой код необходимо вставить именно в тот раздел сайта, где планируется показ рекламы.Если структура сайта или логика продаж рекламных мест на сайте не
-                        предусматривает разбиения сайта на разделы, можно воспользоваться любой из предложенных схем.
-                    </p>
-                    <p style="color: red">Слева в ротации несколько баннеров, так как для этой площадки указано размещение для нескольких баннеров</p>
+               <div class="text-content" style="flex: 2;">
+                    <h3 style="margin: 5px; color: #333;">Pre-roll • Linear-Ad Mid Roll VAST 3.0</h3>
+
+                        <!-- Контейнер, в котором лежит плеер -->
+                        <div class="vslot" id="slot1">
+                        <video id="video1" src="video1.mp4" width="480" height="360" controls="controls"></video>
+                        </div>
+
+                        <!-- Скрипт с переменными -->
+                        <script>
+
+                            const testAdFoxParametersMid = {
+                                adFoxParameters: {
+                                    ownerId: "5202278",
+                                    params: {
+                                        p1: "dnvwg",
+                                        p2: "hiux",
+                                        pfc: "hrdjh",
+                                        pfb: "biybkf",
+                                    },
+                                },
+                            };
+                    
+                            ya.videoAd.play({
+                                videoSlot: document.getElementById('video1'),
+                                slot: document.getElementById('slot1'),
+                                config: testAdFoxParametersMid
+                            })
+                        </script>
+    
+                        
                   </div>
                 </div>
                 </div>
