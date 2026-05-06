@@ -43,13 +43,14 @@
                     <div class="text-content" style="flex: 2;">
                     <h3 style="margin-top: 0; color: #333;">Стандартный VAST</h3>
                         <div id="video_container">
-                        <video id='videoParent' src="video1.mp4" width="480" height="360" controls="controls"></video>
+                        <video id="video" src="video1.mp4" width="480" height="360" controls="controls"></video>
                                     <script>
+                                        var video = document.getElementById('video');
+                                        video.volume = 0.5;
+                                        
                                         var adFoxParameters = {
                                         adFoxParameters: {
                                             ownerId: 5202278,
-                                            // ID родительского контейнера тега <video></video>
-                                            containerId: 'video_container',
                                             // Параметры Adfox
                                             params: {
                                             p1: 'dmpgw',
@@ -64,7 +65,7 @@
                                         videoSlot: document.querySelector('#video_container'),
                                         // Элемент для показа контролов. Элемент не должен быть статически позиционирован.
                                         // Можно использовать родительский элемент видео.
-                                        slot: document.querySelector('#videoParent'),
+                                        slot: document.querySelector('#video'),
                                         // Конфиг загрузки и конфиг проигрывания рекламы.
                                         config: adFoxParameters,
                                     });
