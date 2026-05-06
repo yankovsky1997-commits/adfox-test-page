@@ -42,12 +42,16 @@
 
                     <div class="text-content" style="flex: 2;">
                     <h3 style="margin-top: 0; color: #333;">Стандартный VAST</h3>
+
+                        <!-- Контейнер, в котором лежит плеер -->
                         <div id="video_container">
                         <video id="video" src="video1.mp4" width="480" height="360" controls="controls"></video>
                                     <script>
+                                        //переменная, чтобы при проигрывании звук был 25%
                                         var video = document.getElementById('video');
-                                        video.volume = 0.5;
-                                        
+                                        video.volume = 0.25;
+
+                                        //код Adfox
                                         var adFoxParameters = {
                                         adFoxParameters: {
                                             ownerId: 5202278,
@@ -62,7 +66,7 @@
                                                              }
                                         ya.videoAd.play({
                                         // Видеоэлемент
-                                        videoSlot: document.querySelector('#video_container'),
+                                        videoSlot: document.querySelector('#video'),
                                         // Элемент для показа контролов. Элемент не должен быть статически позиционирован.
                                         // Можно использовать родительский элемент видео.
                                         slot: document.querySelector('#video'),
