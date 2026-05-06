@@ -55,6 +55,7 @@
                                         var adFoxParameters = {
                                         adFoxParameters: {
                                             ownerId: 5202278,
+                                            containerId: 'video_container',
                                             // Параметры Adfox
                                             params: {
                                             p1: 'dmpgw',
@@ -69,7 +70,7 @@
                                         videoSlot: document.querySelector('#video'),
                                         // Элемент для показа контролов. Элемент не должен быть статически позиционирован.
                                         // Можно использовать родительский элемент видео.
-                                        slot: document.querySelector('#video'),
+                                        slot: document.querySelector('#video_container'),
                                         // Конфиг загрузки и конфиг проигрывания рекламы.
                                         config: adFoxParameters,
                                     });
