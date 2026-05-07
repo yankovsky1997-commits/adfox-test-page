@@ -46,21 +46,26 @@
                         <!--Тип баннера: Adaptive-All-In-->
                         <div id="adfox_177815655053521810"></div>
                         <script>
-                            window.yaContextCb.push(()=>{
-                                Ya.adfoxCode.create({
-                                    ownerId: 5202278,
-                                    containerId: 'adfox_177815655053521810',
-                                    params: {
+                          window.yaContextCb.push(()=>{
+                            // banner only for desktop
+                            Ya.adfoxCode.createAdaptive({
+                              ownerId: 5202278,
+                              containerId: 'adfox_177815655053521810',
+                              params: {
                                         p1: 'dnwde',
                                         p2: 'jsie',
                                         pfc: 'hunaz',
                                         pfb: 'biyeib'
-                                    }
-                                })
+                              }
+                            },
+                            ['desktop'], // states
+                            {
+                              tabletWidth: 1000,
+                              phoneWidth: 300,
+                              isAutoReloads: false
                             })
+                          })
                         </script>
-
-
 
 
                      <!-- КОНЕЦ МЕСТА ДЛЯ ТЕСТИРУЕМОГО КОДА-->
