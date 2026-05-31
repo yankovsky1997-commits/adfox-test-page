@@ -144,12 +144,6 @@ li {
   bottom: 120px; /* Отступ от нижнего края экрана */
   right: 20px;  /* Отступ от правого края экрана */
   z-index: 9999; /* Высокий z‑index для отображения поверх других элементов */
-  color: white; /* Цвет текста */
-  padding: 15px 20px; /* Внутренние отступы */
-  border-radius: 8px; /* Скругление углов */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Тень для объёма */
-  font-family: Arial, sans-serif; /* Шрифт */
-  font-size: 14px; /* Размер текста */
   width: 200px;
   height: 200px;
 }
