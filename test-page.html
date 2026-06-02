@@ -133,17 +133,28 @@
                         <div id="adfox_17802267012335627"></div>
                         <script>
                             window.yaContextCb.push(()=>{
-                                Ya.adfoxCode.create({
-                                    ownerId: 173858,
-                                    containerId: 'adfox_17802267012335627',
-                                    params: {
-                                        p1: 'cofrj',
-                                        p2: 'gzpa',
-                                        pfc: 'hucmi',
-                                        pfb: 'biwgtp'
-                                    }
-                                })
-                            })
+                            Ya.adfoxCode.createScroll({
+                            ownerId: 173858,
+                            containerId: 'adfox_17802267012335627',
+                            params: {
+                            p1: 'cofrj',
+                            p2: 'gzpa',
+                            insertAfter: '#combo_video',
+                            insertPosition: '0',
+                            stick: true,
+                            stickTo: 'bottom-right',
+                            stickMargin: '100px 0 0 0',
+                            stickyColorScheme: 'light'
+                            },
+                            onRender: function () { (function() {
+                            let style = document.createElement('style');
+                            style.innerText = 'div[style*="fixed"]{z-index:9999999}';
+                            let shadowEl = document.querySelector('#combo_video').nextElementSibling.shadowRoot;
+                            if (shadowEl) shadowEl.appendChild(style);
+                            }());
+                            }
+                            });
+                            });
                         </script>
 
                           <div class="floor-ad" id="floorAd">
