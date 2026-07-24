@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт для тестирования таргетов Adfox</title>
-    <link rel="stylesheet" href="style.css">
     
     <!--код загрузчика Adfox-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 <body>
+               <style>
+              .ad-block-wrapper {
+                display: flex;
+                flex-direction: row;       /* явно: слева направо */
+                flex-wrap: wrap;           /* перенос на новую строку при нехватке места */
+                gap: 20px;                 /* отступ между левой и правой частью */
+                margin: 20px 0;            /* внешние отступы блока */
+                border: 1px dashed #ccc;   /* пунктирная рамка вокруг всего блока */
+                padding: 20px;             /* внутренний отступ */
+                box-sizing: border-box;    /* padding и border входят в ширину */
+              }
+            
+              .ad-block-left,
+              .ad-block-right {
+                box-sizing: border-box;
+              }
+            
+              /* Левая часть: место под баннер */
+              .ad-block-left {
+                flex: 1 1 50%;             /* занимает ~50%, может сжиматься/расти */
+                min-width: 300px;          /* минимальная ширина, чтобы не схлопывалась */
+              }
+            
+              /* Правая часть: описание */
+              .ad-block-right {
+                flex: 1 1 50%;
+                min-width: 300px;
+              }
+            
+              /* Заглушка под баннер (пока нет реального кода) */
+              .ad-placeholder {
+                width: 100%;
+                height: 250px;             /* подставьте высоту под ваш баннер */
+                background-color: #f5f5f5;
+                border: 1px dashed #999;  /* пунктир внутри заглушки — можно убрать */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #888;
+                font-size: 14px;
+              }
+            
+              /* Адаптив: на экранах до 768px блоки встают друг под друга */
+              @media (max-width: 768px) {
+                .ad-block-left,
+                .ad-block-right {
+                  flex: 1 1 100%;          /* занимают 100% ширины */
+                }
+              }
+            </style>
+    
     <!-- Шапка сайта (динамическая) -->
     <header class="header">
         <div class="container">
