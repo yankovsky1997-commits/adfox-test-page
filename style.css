@@ -84,6 +84,7 @@ body {
     padding: 2rem;
     background-color: #f8f9fa;
     border-radius: 8px;
+    border: 1px dashed #ccc;
 }
 
 .block {
