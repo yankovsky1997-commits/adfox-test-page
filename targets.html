@@ -5,62 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт для тестирования таргетов Adfox</title>
+    <link rel="stylesheet" href="style.css">
     
     <!--код загрузчика Adfox-->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 <body>
-               <style>
-              .ad-block-wrapper {
-                display: flex;
-                flex-direction: row;       /* явно: слева направо */
-                flex-wrap: wrap;           /* перенос на новую строку при нехватке места */
-                gap: 20px;                 /* отступ между левой и правой частью */
-                margin: 20px 0;            /* внешние отступы блока */
-                border: 1px dashed #ccc;   /* пунктирная рамка вокруг всего блока */
-                padding: 20px;             /* внутренний отступ */
-                box-sizing: border-box;    /* padding и border входят в ширину */
-              }
-            
-              .ad-block-left,
-              .ad-block-right {
-                box-sizing: border-box;
-              }
-            
-              /* Левая часть: место под баннер */
-              .ad-block-left {
-                flex: 1 1 50%;             /* занимает ~50%, может сжиматься/расти */
-                min-width: 300px;          /* минимальная ширина, чтобы не схлопывалась */
-              }
-            
-              /* Правая часть: описание */
-              .ad-block-right {
-                flex: 1 1 50%;
-                min-width: 300px;
-              }
-            
-              /* Заглушка под баннер (пока нет реального кода) */
-              .ad-placeholder {
-                width: 100%;
-                height: 250px;             /* подставьте высоту под ваш баннер */
-                background-color: #f5f5f5;
-                border: 1px dashed #999;  /* пунктир внутри заглушки — можно убрать */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #888;
-                font-size: 14px;
-              }
-            
-              /* Адаптив: на экранах до 768px блоки встают друг под друга */
-              @media (max-width: 768px) {
-                .ad-block-left,
-                .ad-block-right {
-                  flex: 1 1 100%;          /* занимают 100% ширины */
-                }
-              }
-            </style>
     
     <!-- Шапка сайта (динамическая) -->
     <header class="header">
@@ -75,48 +26,58 @@
         </div>
     </header>
 
-    <!-- Основное содержимое -->
-    <main class="content" style="margin-bottom: 50px;">
-
-
-            <div class="ad-block-wrapper">
-              <div class="ad-block-left">
-                <!-- Сюда вставьте код рекламного баннера -->
-                <div class="ad-placeholder">
-                    <!--AdFox START-->
-                    <!--yandex_oleg.yankovsky007-->
-                    <!--Площадка: Тестовый сайт на GitHub / Тестирование таргетингов / Media Banners - таргет-->
-                    <!--Категория: <не задана>-->
-                    <!--Баннер: <не задана>-->
-                    <!--Тип баннера: Media banner-->
-                    <div id="adfox_178489033728311810"></div>
-                    <script>
-                        window.yaContextCb.push(()=>{
-                            Ya.adfoxCode.create({
-                                ownerId: 5202278,
-                                containerId: 'adfox_178489033728311810',
-                                params: {
-                                    p1: 'dqnib',
-                                    p2: 'p',
-                                    pfc: 'hxjgw',
-                                    pfb: 'bjjtdq',
-                                    puid1: 'url-target-page'
-                                }
-                            })
-                        })
-                    </script>
-                </div>
-              </div>
+ <!-- Основное содержимое -->
+    <main class="content">
+        <div class="container">
+            <h2>Добро пожаловать!</h2>
             
-              <div class="ad-block-right">
-                <h3>Описание рекламного баннера</h3>
-                <p>Здесь укажите краткое описание: что рекламируется, ключевые преимущества, призыв к действию и т. д.</p>
-                <!-- Можно добавить ссылки, кнопки и т.п. -->
-              </div>
-            </div>
-        
-    </main>
+            <!-- Много контента для прокрутки -->
+            <div class="dummy-content">
+                
+                <div class="block">
+                    <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
+                      <div class="image-container" style="flex: 1;">
+                        <!--AdFox START-->
+                        <!--yandex_oleg.yankovsky007-->
+                        <!--Площадка: Тестовый сайт на GitHub / Тестирование таргетингов / Media Banners - таргет-->
+                        <!--Категория: <не задана>-->
+                        <!--Баннер: <не задана>-->
+                        <!--Тип баннера: Media banner-->
+                        <div id="adfox_178489189559251810"></div>
+                        <script>
+                            window.yaContextCb.push(()=>{
+                                Ya.adfoxCode.create({
+                                    ownerId: 5202278,
+                                    containerId: 'adfox_178489189559251810',
+                                    params: {
+                                        p1: 'dqnib',
+                                        p2: 'p',
+                                        pfc: 'hxjgw',
+                                        pfb: 'bjjtdq',
+                                        puid1: 'url-target-page'
+                                    }
+                                })
+                            })
+                        </script>
 
+                         </div>
+                    <div class="text-content" style="flex: 2;">
+                    <h3 style="margin-top: 0; color: #333;">Баннер Image, код вставки с уровня размещения баннера</h3>
+                    <p style="color: #666; line-height: 1.2;">
+                     Особенности работы кода вставки с этого уровня:
+                        
+                    </p>
+                  </div>
+                </div>
+                </div>
+
+               
+                <!-- КОНЕЦ КОНТЕНТА -->
+                
+            </div>
+        </div>
+    </main>
+    
     <!-- Подвал сайта -->
     <footer class="footer">
         <div class="container">
