@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт для тестирования функционала Adfox</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!--код загрузчика Adfox-->
+      <script async src='https://yandex.ru/ads/system/header-bidding.js'></script>
+      <script>
+      var adfoxBiddersMap = {
+        "adfox_yandex_oleg.yankovsky007": "3609839"
+      };
+      
+      var adUnits = [
+        {
+          "code": "adfox_178508014041931810",
+          "bids": [
+            {
+              "bidder": "adfox_yandex_oleg.yankovsky007",
+              "params": {
+                "p1": "dqnqi",
+                "p2": "p",
+                "puid1": ""
+              }
+            }
+          ]
+        }
+      ];
+      
+      var userTimeout = 500;
+      
+      window.YaHeaderBiddingSettings = {
+         biddersMap: adfoxBiddersMap,
+         adUnits: adUnits,
+         timeout: userTimeout,
+         trustedOwners: [5202278]
+      };
+      </script>
+      <script>window.yaContextCb = window.yaContextCb || []</script>
+      <script src='https://yandex.ru/ads/system/context.js' async></script>
+          
+    
+</head>
+<body>
+    <!-- Шапка сайта (динамическая) -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADFOX - тестовый сайт</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="targets.html" class="nav-link">Тестирование таргетингов</a>
+                <a href="hb.html" class="nav-link">Тест Header Bidding Adfox</a>
+                <a href="test-page.html" class="nav-link">Тестовая страница</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+        <div class="container">
+            <h2>Добро пожаловать!</h2>
+            
+            <!-- Много контента для прокрутки -->
+            <div class="dummy-content">
+                
+                <div class="block">
+                    <div class="content-block" style="display: flex; align-items: center; gap: 5px; max-width: 1200px; margin: 5px auto;">
+                      <div class="image-container" style="flex: 1;">
+                       <!--AdFox START-->
+                        <!--yandex_oleg-yankovsky@mail.ru-->
+                        <!--Площадка: GitHub TestWeb / TestSectionWeb / TestPlace-->
+                        <!--Категория: <не задана>-->
+                        <!--Тип баннера: Media banner-->
+                        <div id="adfox_178508014041931810"></div>
+                        <script>
+                            window.yaContextCb.push(()=>{
+                                Ya.adfoxCode.create({
+                                    ownerId: 12366886,
+                                    containerId: 'adfox_178508014041931810',
+                                    params: {
+                                        p1: 'dqnqj',
+                                        p2: 'p'
+                                    }
+                                })
+                            })
+                        </script>
+
+                <!-- КОНЕЦ КОНТЕНТА -->
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Тестовый сайт для Adfox</p>
+            <div class="social">
+                <a href="https://yandex.ru/support/adfox/ru/" class="social-link">Справка Adfox</a>
+                <a href="https://yandex.ru/dev/adfox/doc/ru/" class="social-link">Справка API Adfox</a>
+                <a href="#" class="social-link">Test btn</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
