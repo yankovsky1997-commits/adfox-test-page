@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Кодировщик Adfox</title>
+      <style>
+        body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; background: #f7f7f9; color: #222; }
+        h1 { font-size: 1.4em; }
+        textarea { width: 100%; height: 160px; box-sizing: border-box; font-family: monospace; font-size: 14px; padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+        button { margin: 12px 0; padding: 10px 24px; font-size: 15px; border: none; border-radius: 6px; background: #4a3; color: #fff; cursor: pointer; }
+        button:hover { background: #392; }
+        .tabs { display: flex; gap: 4px; margin-bottom: 16px; }
+        .tab { padding: 8px 20px; border: 1px solid #ccc; border-radius: 6px 6px 0 0; background: #eaeaea; cursor: pointer; user-select: none; }
+        .tab.active { background: #fff; border-bottom: none; font-weight: bold; }
+        pre { white-space: pre-wrap; word-break: break-word; background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 12px; font-family: monospace; font-size: 14px; min-height: 60px; }
+      </style>
+</head>
+  
+<body>
+      <h1>Кодировщик чисел ↔️ Adfox-строки</h1>
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(0)">Число → Код</div>
+        <div class="tab" onclick="switchTab(1)">Код → Число</div>
+      </div>
+      
+      <div id="tab0">
+        <p>Введите числа (по одному в строке или через запятую):</p>
+        <textarea id="inputNum" placeholder="1558775&#10;1558776&#10;1558791"></textarea>
+        <button onclick="encodeAll()">Закодировать</button>
+        <pre id="outputEnc"></pre>
+      </div>
+      
+      <div id="tab1" style="display:none">
+        <p>Введите коды (по одному в строке или через запятую):</p>
+        <textarea id="inputCode" placeholder="dkrwx&#10;dkrwy&#10;dkrxn"></textarea>
+        <button onclick="decodeAll()">Декодировать</button>
+        <pre id="outputDec"></pre>
+      </div>
+      
+      <script>
+      function intToCode(n) {
+        const a = "abcdefghijklmnopqrstuvwxyz";
+        let s = "";
+        for (let i = 0; i < 5; i++) {
+          s = a[n % 26] + s;
+          n = Math.floor(n / 26);
+        }
+        return s;
+      }
+      
+      function codeToInt(code) {
+        const a = "abcdefghijklmnopqrstuvwxyz";
+        let n = 0;
+        for (let c of code) {
+          n = n * 26 + a.indexOf(c);
+        }
+        return n;
+      }
+      
+      function encodeAll() {
+        const raw = document.getElementById("inputNum").value.trim();
+        if (!raw) return;
+        const nums = raw.split(/[,\n\s]+/).filter(x => x).map(Number);
+        const result = nums.map(n => intToCode(n)).join("\n");
+        document.getElementById("outputEnc").textContent = result;
+      }
+      
+      function decodeAll() {
+        const raw = document.getElementById("inputCode").value.trim();
+        if (!raw) return;
+        const codes = raw.split(/[,\n\s]+/).filter(x => x);
+        const result = codes.map(c => codeToInt(c)).join("\n");
+        document.getElementById("outputDec").textContent = result;
+      }
+      
+      function switchTab(i) {
+        document.getElementById("tab0").style.display = i === 0 ? "" : "none";
+        document.getElementById("tab1").style.display = i === 1 ? "" : "none";
+        document.querySelectorAll(".tab")[0].classList.toggle("active", i === 0);
+        document.querySelectorAll(".tab")[1].classList.toggle("active", i === 1);
+      }
+      </script>
+      </body>
+</html>
